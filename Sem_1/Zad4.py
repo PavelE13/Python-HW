@@ -12,7 +12,7 @@ while f:
     b=input('Введите размер плитки шоколада n: ')
     c=input('Введите размер плитки шоколада m: ')
     if a.isdigit() and b.isdigit() and c.isdigit():
-        print('yes' if int(b)>int(a) or int(c)>int(a) else 'no')
+        print('yes' if int(b)*int(c)>int(a) else 'no')
         f=False
     else:
        print("Введен неправильно № билета. Повторите ввод!")    
