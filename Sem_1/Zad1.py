@@ -10,8 +10,7 @@ if len(a)==3:
     sum = 0
     a=int(a)
     while a>0:
-        x=a%10
-        sum+=x
+        sum += a % 10
         a=a//10
         print(x, " + ")
     print("=",sum, " Done!")
