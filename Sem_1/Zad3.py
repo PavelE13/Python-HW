@@ -7,19 +7,10 @@
 385916 -> yes
 123456 -> no
 """
-f=True
-while f:
-    a=input('Введите № билета (6 знаков): ')
-    if len(a)%2==0 and a.isdigit():
-        sum1=sum2=0
-        for i in range(0,len(a)//2,1):
-            sum1+=int(a[i])
-        for j in range((len(a)//2),len(a),1):
-            sum2+=int(a[j])
-        print('yes' if sum1==sum2 else 'no')
-        f=False
-    elif len(a)%2!=0:
-        print("Количество цифр нечетное. Невозможно определить счастливый билет!")
-    else:
-       print("Введен неправильно № билета. Повторите ввод!")    
-print('Программа завершена!')
+a=input('Введите № билета (6 знаков): ')
+sum1=sum2=0
+for i in range(0,len(a)//2,1):
+    sum1+=int(a[i])
+for j in range((len(a)//2),len(a),1):
+    sum2+=int(a[j])
+print('yes' if sum1==sum2 else 'no')
