@@ -14,7 +14,7 @@ n = int(input('Введите количество элементов в мас�
 my_lst = [random.randint(0, n) for _ in range(n)]
 print(*my_lst)
 x = int(input('введите некоторое число x='))
-for i in range(0, n):
+for i in range(n):
     if my_lst[i] == x:
         count += 1
 print(f'число {x} встречается в массиве {count} раз(а)!')
