@@ -14,5 +14,5 @@ print(*my_lst)
 
 for i in range (a-1):
     new_lst.append(my_lst[i+1]+my_lst[i]+my_lst[i-1])
-print(new_lst)
+#print(new_lst)
 print(f'Максимальное количество кустов которое можно собрать за один заход = {max(new_lst)}')
