@@ -9,6 +9,4 @@ def ext(a, b):
         return a
     return (a*ext(a, b-1))
 
-a=int(input('Введите основание a: '))
-b=int(input('Введите степень b: '))
-print(ext (a,b))
+print(ext (int(input('Введите основание a: ')),b=int(input('Введите степень b: '))))
