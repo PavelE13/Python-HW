@@ -5,3 +5,9 @@
 2 2
 4
 """ 
+def sum_1(a, b):
+    if b > 0:
+        return sum_1(a+1, b-1)
+    return a
+
+print(sum_1 (int(input('Введите a: ')),b=int(input('Введите b: '))))
