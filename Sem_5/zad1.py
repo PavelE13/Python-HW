@@ -7,6 +7,6 @@ A = 2; B = 3 -> 8
 def ext(a, b):
     if b == 1:
         return a
-    return (a*ext(a, b-1))
+    return a * ext(a, b - 1)
 
 print(ext (int(input('Введите основание a: ')),b=int(input('Введите степень b: '))))
