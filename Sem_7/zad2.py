@@ -30,3 +30,9 @@ def print_operation_table(f, arg1, arg2):
     print(*table, sep = '  \t')
 
 print_operation_table(operation, num_rows, num_columns)
+
+#def print_operation_table(f, arg1, arg2):
+#    for row in range(1, num_rows + 1):  
+#       print(*map(f, row[]*num_columns, range(1, num_columns + 1)), sep = '  \t')
+
+#print_operation_table(lambda x,y: x*y, x ,y)
