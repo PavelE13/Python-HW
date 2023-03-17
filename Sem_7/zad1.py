@@ -15,20 +15,21 @@
 
 #text = (input('Введите русский текст по методу Винни:|')).lower()
 text = 'пара-ра-рам рам-пам-папам па-ра-па-да'
-phrases = []
-word = []
-res_rules = []
+#phrases = []
+#word = []
+#res_rules = []
 rule_rus = 'аяуюоеёэиы'
 
 def count_glasn_in_word(f, lst): # Передаем список фраз и лямбда функцию
-    for i in phrases: # Пробегаем по каждой фразе
-        word=list(filter(f, i)) # Создаем список слов в каждой фразе без дефисов (лямбда функция)
-        word_count = [word[j] for j in range(len(word)) if word[j] in rule_rus] # Подсчитываем количество гласных в каждом элементе из списка слов
-        res_rules.append(int(len(word_count))) # Создаем новый список, содержащий количество гласных в слове
-    return res_rules # Возвращаем список
+    # for i in phrases: # Пробегаем по каждой фразе
+    #     word=list(filter(f, i)) # Создаем список слов в каждой фразе без дефисов (лямбда функция)
+    #     word_count = [word[j] for j in range(len(word)) if word[j] in rule_rus] # Подсчитываем количество гласных в каждом элементе из списка слов
+    #     res_rules.append(int(len(word_count))) # Создаем новый список, содержащий количество гласных в слове
+    # return res_rules # Возвращаем список
+    return(len(list(filter(lambda letter: letter in rule_rus,lst))))
 
 
-phrases = text.split() # 1. Разделяем предложение по фразам 
+#phrases = text.split() # 1. Разделяем предложение по фразам 
 res_rules = count_glasn_in_word(lambda x: x not in '-', phrases) #2. Вызываем функцию подсчета гласных во фразах с преобразованием фразы по лямбда функуии с записью в список
 
 if len(set(res_rules)) == 1: # 3. Определяем что с ритмом по условию задачи - список перегоняем в множество. Количество гласных одинаковое в каждой фразе, если множество из 1эл 

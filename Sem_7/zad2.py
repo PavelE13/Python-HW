@@ -18,12 +18,15 @@ x = num_rows = int(input('Введите количество рядов num_row
 y = num_columns = int(input('Введите количество рядов num_columns: '))
 operation = lambda x, y: x * y
 
+# def print_operation_table(f, arg1, arg2):
+#     for x in range(1,arg1+1):
+#         table=[]
+#         for y in range(1,arg2+1):
+#             table.append(f(x,y))
+#         print(*table, sep = '  \t')
+        
 def print_operation_table(f, arg1, arg2):
-    for x in range(1,arg1+1):
-        table=[]
-        for y in range(1,arg2+1):
-            table.append(f(x,y))
-        print(*table, sep = '  \t')
-
+    table = map(lambda x: map (lambda y: f(x,y), range (1, arg2 + 1)), range(1,arg1+1))
+    print(*table, sep = '  \t')
 
 print_operation_table(operation, num_rows, num_columns)
